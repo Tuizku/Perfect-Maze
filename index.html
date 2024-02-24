@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perfect Maze by Tuisku</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="environment" class="hflex">
+            <canvas id="canvas"></canvas>
+            <div id="ui">
+                <h2>Perfect Maze by Tuisku Kahra</h2>
+                <p>This is a maze generator and a solver. The generating uses my own algorithm, and the search uses the Breadth First Search algorithm. All code was created by myself. You can play around with the UI, and check the Powerpoint presentation that is in the project folder. The powerpoint explains the generating and solving algorithms.</p>
+                <p><span style="color: #32CD32">START</span> <span style="color: #EE4B2B">GOAL</span></p>
+                <br>
+
+                <h2>Maze</h2>
+                <div>
+                    <label for="maze_size">Size (px):</label>
+                    <input type="number" id="maze_size" value="0" min="10" max="1000" step="10">
+                    
+                </div>
+                <button id="generate_button" onclick="GenerateMaze(); UpdateMazeSize();">Generate Maze</button>
+                <br><br>
+
+
+                <h2>Search</h2>
+                <div>
+                    <input type="radio" id="instant_search" name="search_speed" onclick="UpdateSearchSpeed()" value="0">
+                    <label for="instant_search">Instant Speed</label>
+                </div>
+                <div>
+                    <input type="radio" id="fast_search" name="search_speed" onclick="UpdateSearchSpeed()" value="1" checked>
+                    <label for="fast_search">Fast Speed</label>
+                </div>
+                <div>
+                    <input type="radio" id="normal_search" name="search_speed" onclick="UpdateSearchSpeed()" value="2">
+                    <label for="normal_search">Normal Speed</label>
+                </div>
+                <div>
+                    <input type="radio" id="slow_search" name="search_speed" onclick="UpdateSearchSpeed()" value="3">
+                    <label for="slow_search">Slow Speed</label>
+                </div>
+                <button id="search_button" onclick="BreadthFirstSearch()">Search</button>
+            </div>
+            
+        </div>
+        
+        
+        <script src="script.js"></script>
+    </body>
+</html>

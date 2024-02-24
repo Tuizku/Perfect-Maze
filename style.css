@@ -1,0 +1,65 @@
+/*#region Public Classes*/
+.hflex {
+    display: flex;
+    flex-direction: row;
+}
+
+.vflex {
+    display: flex;
+    flex-direction: column;
+}
+/*#endregion Public Classes*/
+
+* {
+    font-family: "Trebuchet MS";
+}
+
+body {
+    background-color: #E4E5F1;
+}
+
+#canvas {
+    border: 3px solid;
+    min-width: 300;
+    min-height: 300;
+    width: calc(min(70vw, 80vh));
+    height: calc(min(70vw, 80vh));
+    image-rendering: pixelated;
+}
+
+#environment {
+    gap: 10px;
+}
+
+#ui * {
+    margin: 2px;
+}
+
+
+h2 {
+    margin: 5px;
+}
+
+input[type=number] {
+    width: 50px;
+}
+
+canvas {
+    background-color: black;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #57e757;
+    border: 2px solid;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #4ad64a;
+}
+
+button:active {
+    transform: scale(1.1);
+}
